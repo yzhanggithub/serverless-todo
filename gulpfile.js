@@ -15,8 +15,10 @@ gulp.task('zip', function() {
   const paths = [
     'src/*.js',
     'public/**',
-    'node_modules/mime-types/**',
-    'node_modules/mime-db/**'
+    'node_modules/*/**'
+    //'node_modules/mime-types/**',
+    //'node_modules/mime-db/**',
+    //'node_modules/aws-xray-sdk-core/**'
   ];
   gulp.src(paths, { base: '.' })
     .pipe(zip('todo.zip'))
