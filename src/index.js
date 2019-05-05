@@ -1,4 +1,6 @@
-const aws = require('aws-sdk');
+var AWSXRay = require('aws-xray-sdk-core');
+var aws = AWSXRay.captureAWS(require('aws-sdk'));
+//const aws = require('aws-sdk');
 const doc = new aws.DynamoDB.DocumentClient();
 const fs = require('fs');
 const mime = require('mime-types');
